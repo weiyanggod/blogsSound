@@ -1,6 +1,7 @@
 ---
 title: 简介
 abbrlink: 28581
+cover: '../img/thumb-1920-820043.jpg'
 ---
 
 # 简介
