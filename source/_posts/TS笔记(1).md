@@ -1,5 +1,5 @@
 ---
-title: typescript笔记(1)
+title: typescript笔记(1)-类型的描述
 abbrlink: 60349
 date: 2022-10-26 20:44:49
 tags: typescript
@@ -152,4 +152,21 @@ a(1) //这样会报错,因为只传了一个参数
 
 ```ts
 type FnReturnVoid = () => void
+```
+
+# any 和 unknown
+
+<font color='blue'>any 表示所有类型的集合,当声明为 any 时,值可以是任意类型</font>
+
+```ts
+const a: any = 1
+```
+
+<font color='pink'>unknown 表示事先并不知道这个值的类型,后续也可以通过断言追加类型</font>
+
+```ts
+const b: unknown = 1
+b.toFixed() // 会报错,因为类型是unknown,不知道类型,不能使用toFixed方法
+//追加类型
+;(b as number) = 1 // 使用断言可以让b的类型变成number,则可以使用toFixed方法
 ```
